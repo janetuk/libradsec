@@ -132,6 +132,11 @@ raspbian9:
     VERSION: 2.0.21-stable
   <<: *debian9common
 
+debian10:
+  image: registry.ci.ti.ja.net/jisc/moonshot-build/debian10:latest
+  when: manual
+  <<: *debiancommon
+
 ubuntu14:
   image: registry.ci.ti.ja.net/jisc/moonshot-build/ubuntu14:latest
   <<: *debiancommon
