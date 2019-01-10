@@ -1,4 +1,10 @@
-libradsec (0.0.7-1.DIST) unstable; urgency=medium
+libradsec (1.0-1.DIST) unstable; urgency=medium
+
+  * TBD
+
+ -- moonshot@jisc.ac.uk <moonshot@jisc.ac.uk>  Wed, 27 Nov 2018 13:00:00 +0000
+
+libradsec (0.0.7-1) unstable; urgency=medium
 
   * Include latests changes from NORDUNET
   * Synchronised dictionary with FreeRadius
