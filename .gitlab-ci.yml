@@ -9,7 +9,8 @@ before_script:
 
 .centoscommon: &centoscommon
   stage: build
-  except: tags
+  except:
+    - tags
   tags:
     - moonshot
   script:
@@ -28,7 +29,8 @@ before_script:
 
 .debiancommon: &debiancommon
   stage: build
-  except: tags
+  except:
+    - tags
   tags:
     - moonshot
   script:
@@ -48,7 +50,8 @@ before_script:
 
 .debian9common: &debian9common
   stage: build
-  except: tags
+  except:
+    - tags
   tags:
     - moonshot
   script:
@@ -83,7 +86,8 @@ before_script:
 
 .alpinecommon: &alpinecommon
   stage: build
-  except: tags
+  except:
+    - tags
   tags:
     - moonshot
   script:
