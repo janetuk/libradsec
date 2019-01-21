@@ -134,7 +134,6 @@ raspbian9:
 
 debian10:
   image: registry.ci.ti.ja.net/jisc/moonshot-build/debian10:latest
-  when: manual
   <<: *debiancommon
 
 ubuntu14:
