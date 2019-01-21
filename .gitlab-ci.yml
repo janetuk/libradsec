@@ -39,7 +39,7 @@ before_script:
     - autoreconf -fi
     - ./configure
     - make dist
-    - mv libradsec-1.0.tar.gz ../libradsec_1.0.orig.tar.gz
+    - mv libradsec-1.0.1.tar.gz ../libradsec_1.0.1.orig.tar.gz
     - debuild -us -uc
     - mkdir build
     - cp ../*.deb build
@@ -75,7 +75,7 @@ before_script:
     - autoreconf -fi
     - ./configure
     - make dist
-    - mv libradsec-1.0.tar.gz ../libradsec_1.0.orig.tar.gz
+    - mv libradsec-1.0.1.tar.gz ../libradsec_1.0.1.orig.tar.gz
     - debuild -us -uc
     - mkdir build
     - cp ../*.deb build
