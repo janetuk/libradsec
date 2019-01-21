@@ -34,7 +34,7 @@ before_script:
     - autoreconf -fi
     - ./configure
     - make dist
-    - mv libradsec-0.0.7.tar.gz ../libradsec_0.0.7.orig.tar.gz
+    - mv libradsec-1.0.tar.gz ../libradsec_1.0.orig.tar.gz
     - debuild -us -uc
     - mkdir build
     - cp ../*.deb build
@@ -68,7 +68,7 @@ before_script:
     - autoreconf -fi
     - ./configure
     - make dist
-    - mv libradsec-0.0.7.tar.gz ../libradsec_0.0.7.orig.tar.gz
+    - mv libradsec-1.0.tar.gz ../libradsec_1.0.orig.tar.gz
     - debuild -us -uc
     - mkdir build
     - cp ../*.deb build
@@ -127,6 +127,10 @@ raspbian9:
     SRC_REPO: http://archive.raspbian.org/raspbian/ stretch main
     VERSION: 2.0.21-stable
   <<: *debian9common
+
+debian10:
+  image: registry.ci.ti.ja.net/jisc/moonshot-build/debian10:latest
+  <<: *debiancommon
 
 ubuntu14:
   image: registry.ci.ti.ja.net/jisc/moonshot-build/ubuntu14:latest
