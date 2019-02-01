@@ -22,10 +22,12 @@ before_script:
     - mkdir -p SOURCES
     - mv libradsec*.tar.gz SOURCES
     - rpmbuild -bb libradsec.spec --define "_topdir `pwd`"
+    - rpmbuild -bs libradsec.spec --define "_topdir `pwd`"
   artifacts:
     expire_in: 6 months
     paths:
         - RPMS
+        - SRPMS
 
 .debiancommon: &debiancommon
   stage: build
@@ -36,17 +38,13 @@ before_script:
   script:
     - apt-get -y update && apt-get -y dist-upgrade
     - sed -i "s/DIST/$CI_JOB_NAME.$CI_PIPELINE_ID/g" debian/changelog
-    - autoreconf -fi
-    - ./configure
-    - make dist
-    - mv libradsec-1.0.1.tar.gz ../libradsec_1.0.1.orig.tar.gz
     - debuild -us -uc
     - mkdir build
-    - cp ../*.deb build
+    - cp ../*.deb ../*.dsc ../*tar* build
   artifacts:
     expire_in: 6 months
     paths:
-        - build/*.deb
+        - build/*
 
 .debian9common: &debian9common
   stage: build
@@ -72,17 +70,13 @@ before_script:
     # libradsec build
     - apt-get -y update && apt-get -y dist-upgrade
     - sed -i "s/DIST/$CI_JOB_NAME.$CI_PIPELINE_ID/g" debian/changelog
-    - autoreconf -fi
-    - ./configure
-    - make dist
-    - mv libradsec-1.0.1.tar.gz ../libradsec_1.0.1.orig.tar.gz
     - debuild -us -uc
     - mkdir build
-    - cp ../*.deb build
+    - cp ../*.deb ../*.dsc ../*tar* build
   artifacts:
     expire_in: 6 months
     paths:
-        - build/*.deb
+        - build/*
 
 .alpinecommon: &alpinecommon
   stage: build
