@@ -21,8 +21,7 @@ before_script:
     - make dist
     - mkdir -p SOURCES
     - mv libradsec*.tar.gz SOURCES
-    - rpmbuild -bb libradsec.spec --define "_topdir `pwd`"
-    - rpmbuild -bs libradsec.spec --define "_topdir `pwd`"
+    - rpmbuild -ba libradsec.spec --define "_topdir `pwd`"
   artifacts:
     expire_in: 6 months
     paths:
