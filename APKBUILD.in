@@ -4,7 +4,7 @@ pkgname=@PACKAGE@
 pkgver=@PACKAGE_VERSION@
 pkgrel=0
 pkgdesc="Libradsec is a RADIUS over TLS library."
-url="http://git.nordu.net/?p=radsecproxy.git;a=shortlog;h=refs/heads/libradsec"
+url="https://github.com/janetuk/libradsec.git"
 arch="all"
 license="BSD-3-Clause"
 depends=""

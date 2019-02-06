@@ -8,8 +8,7 @@ It was originally developed by NORDUNET A/S
 
 
 As of 2018, it is maintained by Jisc UK. The canonical pickup point is:
-https://gitlab.ci.ti.ja.net/moonshot/libradsec
-
+https://github.com/janetuk/libradsec.git
 
 The source code is licensed under a 3-clause BSD license. See the
 LICENSE file.

@@ -4,8 +4,7 @@ Maintainer: Jisc <moonshot@jisc.ac.uk>
 Build-Depends: debhelper (>= 9), autotools-dev, libconfuse-dev, libssl1.0-dev|libssl-dev, libevent-dev (>= 2.0), dh-autoreconf
 Standards-Version: 3.9.8
 Section: libs
-Vcs-Git: git://git.project-moonshot.org/git/libradsec.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/libradsec.git;a=summary
+Vcs-Git: https://github.com/janetuk/libradsec.git
 
 Package: libradsec-dev
 Section: libdevel
