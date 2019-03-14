@@ -70,7 +70,7 @@ rs_conn_create (struct rs_context *ctx,
 		const char *config)
 {
   struct rs_connection *c;
-
+  assert(conn != NULL);
   c = (struct rs_connection *) malloc (sizeof(struct rs_connection));
   if (!c)
     return rs_err_ctx_push_fl (ctx, RSE_NOMEM, __FILE__, __LINE__, NULL);
@@ -95,15 +95,16 @@ rs_conn_create (struct rs_context *ctx,
       else
 	{
 	  c->realm = rs_malloc (ctx, sizeof (struct rs_realm));
-	  if (!c->realm)
-	    return rs_err_ctx_push_fl (ctx, RSE_NOMEM, __FILE__, __LINE__,
+	  if (!c->realm) {
+	    free(c);
+      return rs_err_ctx_push_fl (ctx, RSE_NOMEM, __FILE__, __LINE__,
 				       NULL);
+    }
 	  memset (c->realm, 0, sizeof (struct rs_realm));
 	}
     }
 
-  if (conn)
-    *conn = c;
+  *conn = c;
   return RSE_OK;
 }
 

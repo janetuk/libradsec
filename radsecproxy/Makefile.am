@@ -9,7 +9,6 @@ noinst_LTLIBRARIES = libradsec-radsecproxy.la
 libradsec_radsecproxy_la_SOURCES = \
 	debug.c debug.h \
 	gconfig.h \
-	hash.c hash.h \
 	hostport_types.h \
 	list.c list.h \
 	radmsg.h \

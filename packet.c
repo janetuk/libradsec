@@ -165,7 +165,7 @@ rs_packet_create_authn_request (struct rs_connection *conn,
   struct rs_packet *pkt;
   int err;
 
-  if (rs_packet_create (conn, pkt_out))
+  if (rs_packet_create (conn, pkt_out) || *pkt_out == NULL)
     return -1;
 
   pkt = *pkt_out;

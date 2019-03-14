@@ -171,7 +171,6 @@ size_t nr_vp_snprintf_value(char *buffer, size_t buflen, const VALUE_PAIR *vp)
 	if (len >= buflen) return 0;
 
 	p += len;
-	buflen -= len;
 
 	return p - buffer;
 }
