@@ -32,7 +32,7 @@ int
 rs_context_create (struct rs_context **ctx)
 {
   struct rs_context *h;
-
+  assert(ctx != NULL);
 #if defined (RS_ENABLE_TLS)
   if (tls_init ())
     return RSE_SSLERR;
@@ -44,8 +44,7 @@ rs_context_create (struct rs_context **ctx)
 
   debug_init ("libradsec");	/* radsecproxy compat, FIXME: remove */
 
-  if (ctx != NULL)
-    *ctx = h;
+  *ctx = h;
 
   return RSE_OK;
 }

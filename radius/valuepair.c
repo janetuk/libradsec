@@ -38,7 +38,7 @@ void nr_vp_free(VALUE_PAIR **head)
 	for (vp = *head; vp != NULL; vp = next) {
 		next = vp->next;
 		if (vp->da->flags.encrypt) {
-			memset(vp, 0, sizeof(vp));
+			memset(vp, 0, sizeof(VALUE_PAIR));
 		}
 		free(vp);
 	}

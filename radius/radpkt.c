@@ -209,17 +209,20 @@ static int msg_auth_ok(const RADIUS_PACKET *original,
 		break;
 	}
 	
-	nr_hmac_md5(data, length,
-		    (const uint8_t *) original->secret, original->sizeof_secret,
-		    calc_auth_vector);
+	// If we have a request to compare
+	if (original) {
+		nr_hmac_md5(data, length,
+			    (const uint8_t *) original->secret, original->sizeof_secret,
+			    calc_auth_vector);
 
-	memcpy(ma + 2, msg_auth_vector, sizeof(msg_auth_vector));
-	memcpy(data + 4, packet_vector, sizeof(packet_vector));
+		memcpy(ma + 2, msg_auth_vector, sizeof(msg_auth_vector));
+		memcpy(data + 4, packet_vector, sizeof(packet_vector));
 
-	if (digest_cmp(calc_auth_vector, msg_auth_vector,
-		       sizeof(calc_auth_vector)) != 0) {
-		nr_debug_error("Invalid Message-Authenticator");
-		return -RSE_MSG_AUTH_WRONG;
+		if (digest_cmp(calc_auth_vector, msg_auth_vector,
+			       sizeof(calc_auth_vector)) != 0) {
+			nr_debug_error("Invalid Message-Authenticator");
+			return -RSE_MSG_AUTH_WRONG;
+		}
 	}
 
 	return 1;
@@ -629,7 +632,6 @@ int nr_packet_encode(RADIUS_PACKET *packet, const RADIUS_PACKET *original)
 	     (packet->code == PW_STATUS_SERVER)) &&
 	    !ma &&
 	    ((data + 18) <= end)) {
-		ma = (data - packet->data);
 		data[0] = PW_MESSAGE_AUTHENTICATOR;
 		data[1] = 18;
 		memset(data + 2, 0, 16);

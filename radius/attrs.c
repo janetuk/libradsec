@@ -62,8 +62,6 @@ static ssize_t vp2data_any(const RADIUS_PACKET *packet,
 		return vp2data_tlvs(packet, original, nest, pvp,
 				    start, room);
 	}
-#else
-	nest = nest;		/* -Wunused */
 #endif
 
 	/*
@@ -751,8 +749,6 @@ static ssize_t data2vp_any(const RADIUS_PACKET *packet,
 				    attribute, vendor, nest,
 				    data, length, pvp);
 	}
-#else
-	nest = nest;		/* -Wunused */
 #endif
 
 	/*
@@ -1229,7 +1225,6 @@ ssize_t nr_attr2vp_vsa(const RADIUS_PACKET *packet,
 	}
 #endif
 
-	dv_type = dv_length = 1;
 	dv = nr_dict_vendor_byvalue(lvalue);
 	if (!dv) {
 		return nr_attr2vp_rfc(packet, original,

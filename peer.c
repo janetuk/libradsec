@@ -58,8 +58,8 @@ rs_peer_create (struct rs_connection *conn, struct rs_peer **peer_out)
   if (peer)
     {
       peer->conn = conn;
-      peer->realm->timeout = 2;	/* FIXME: Why?  */
-      peer->realm->retries = 2;	/* FIXME: Why?  */
+      // peer->realm->timeout = 2;	/* FIXME: Realm is not initialised  */
+      // peer->realm->retries = 2;	/* FIXME: Realm is not initialised  */
     }
   else
     return rs_err_conn_push_fl (conn, RSE_NOMEM, __FILE__, __LINE__, NULL);
