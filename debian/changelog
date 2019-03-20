@@ -1,8 +1,8 @@
 libradsec (1.0.3.DIST) unstable; urgency=medium
 
-  * TBD
+  * Resolve some issues found by the CLANG static analyser
 
- -- moonshot@jisc.ac.uk <moonshot@jisc.ac.uk>  Thu, 28 Feb 2019 00:00:00 +0000
+ -- moonshot@jisc.ac.uk <moonshot@jisc.ac.uk>  Wed, 20 Mar 2019 00:00:00 +0000
 
 libradsec (1.0.2.DIST) unstable; urgency=medium
 
