@@ -134,10 +134,6 @@ debian10:
   image: $DOCKER_REGISTRY_URL/debian10:latest
   <<: *debiancommon
 
-ubuntu14:
-  image: $DOCKER_REGISTRY_URL/ubuntu14:latest
-  <<: *debiancommon
-
 ubuntu16:
   image: $DOCKER_REGISTRY_URL/ubuntu16:latest
   <<: *debiancommon
