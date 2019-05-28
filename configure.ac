@@ -59,7 +59,7 @@ AC_TYPE_UINT8_T
 # Checks for library functions.
 AC_CHECK_FUNCS([memset socket strdup strerror strrchr])
 
-AC_CONFIG_FILES([Makefile libradsec.spec APKBUILD
+AC_CONFIG_FILES([Makefile libradsec.spec APKBUILD PKGBUILD
                  radsecproxy/Makefile
                  radius/Makefile
                  include/Makefile
