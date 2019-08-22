@@ -73,6 +73,63 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Tue Sep 27 2011  <hartmans@moonbuildcentos.dev.ja.net> - %{version}-1
-- initial version
+* Thu Mar 21 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.4-1
+- TBD
 
+* Wed Mar 20 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.3-1
+- Resolve some issues found by the CLANG static analyser
+
+* Wed Feb 27 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.2-1
+- Update source URLs to https://github.com/janetuk/libradsec.git
+
+* Sat Feb 02 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.1-1
+- Build source packages
+
+* Mon Jan 21 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0-1
+- Release 1.0
+- Include Debian Buster build
+
+* Wed Nov 27 2018 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 0.0.7-1
+- Include latests changes from NORDUNET
+- Synchronised dictionary with FreeRadius
+
+* Fri Aug 10 2018 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 0.0.6-1
+- Update maintainer information
+
+* Mon Dec 19 2016 Sam Hartman <hartmans@debian.org> - 0.0.5-3
+- Build depend on openssl 1.0, Closes: #828410
+- Update standards version to 3.9.8 (no changes)
+
+* Tue Oct 07 2014 Sam Hartman <hartmans@debian.org> - 0.0.5-2
+- Include license for radsecproxy/radsecproxy.h, Thanks Thorsten Alteholz
+
+* Sun Aug 24 2014 Sam Hartman <hartmans@debian.org> - 0.0.5-1
+- Update copyright file and review licenses of source code
+- Upload to Debian, Closes: #647742
+- Note that lintian miss-detected gpl+openssl, because only the
+  packaging is GPL and the packaging includes no code.  In case I should
+  forget to mark this in debian/copyright in the future if there are
+  ever any patches, any code patches developed by Painless Security are
+  intended to be licensed under the libradsec BSD license.
+- Multiarch
+
+* Thu Oct 03 2013 Sam Hartman <hartmans@debian.org> - 0.0.4-2
+- Add disable_hostname_check option
+
+* Mon Sep 30 2013 Sam Hartman <hartmans@debian.org> - 0.0.4-1
+- New upstream version
+
+* Tue Sep 18 2012 Sam Hartman <hartmans@debian.org> - 0.0.3-1
+- New upstream version
+
+* Wed Jan 25 2012 Sam Hartman <hartmans@debian.org> - 0.0.2.20120125-1
+- New upstream version
+
+* Thu Jan 19 2012 Sam Hartman <hartmans@debian.org> - 0.0.2.20110426-4
+- Work around old oneiric dpkg-buildflags
+
+* Wed Jan 18 2012 Sam Hartman <hartmans@debian.org> - 0.0.2.20110426-2
+- Include -threads in CFLAGS for ubuntu builds
+
+* Tue Apr 26 2011 Sam Hartman <hartmans@debian.org> - 0.0.2.20110426-1
+- Initial release
