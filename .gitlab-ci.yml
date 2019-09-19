@@ -134,7 +134,6 @@ debian10:
 
 raspbian10:
   image: $DOCKER_REGISTRY_URL/raspbian10:latest
-  when: manual
   <<: *debiancommon
 
 ubuntu16:
