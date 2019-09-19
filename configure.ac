@@ -1,7 +1,7 @@
 # -*- Autoconf -*- script for libradsec.
 
 AC_PREREQ([2.63])
-AC_INIT([libradsec], [1.0.3], [moonshot@jisc.ac.uk])
+AC_INIT([libradsec], [1.0.4], [moonshot@jisc.ac.uk])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_SRCDIR([radsec.c])
 AC_CONFIG_AUX_DIR([build-aux])
@@ -59,7 +59,7 @@ AC_TYPE_UINT8_T
 # Checks for library functions.
 AC_CHECK_FUNCS([memset socket strdup strerror strrchr])
 
-AC_CONFIG_FILES([Makefile libradsec.spec APKBUILD
+AC_CONFIG_FILES([Makefile libradsec.spec APKBUILD PKGBUILD
                  radsecproxy/Makefile
                  radius/Makefile
                  include/Makefile
