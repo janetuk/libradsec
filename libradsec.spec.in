@@ -73,8 +73,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Thu Mar 21 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.4-1
-- TBD
+* Thu Sep 19 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.4-1
+- Added support for Alpine 3.9 and Raspbian 10. Drop support for Ubuntu 14.04
 
 * Wed Mar 20 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.3-1
 - Resolve some issues found by the CLANG static analyser
