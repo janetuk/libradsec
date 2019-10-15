@@ -73,8 +73,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Thu Sep 19 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.5-1
-- TBD
+* Tue Oct 15 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.5-1
+- Add support for CentOS 8
 
 * Thu Sep 19 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.4-1
 - Added support for Alpine 3.9 and Raspbian 10. Drop support for Ubuntu 14.04
