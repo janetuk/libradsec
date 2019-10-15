@@ -73,6 +73,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Oct 15 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.6-1
+- TBD
+
 * Tue Oct 15 2019 moonshot@jisc.ac.uk <moonshot@jisc.ac.uk> - 1.0.5-1
 - Add support for CentOS 8
 
