@@ -9,12 +9,11 @@ arch=('any')
 license=("BSD-3-Clause")
 depends=()
 makedepends=("automake" "autoconf" "libtool" "openssl" "confuse" "libevent")
-source=("https://github.com/janetuk/libradsec/archive/$pkgname-$pkgver.tar.gz")
+source=("$pkgname-$pkgver.tar.gz")
 md5sums=('SKIP')
 
 build() {
-	cd "$srcdir/$pkgname-$pkgname-$pkgver"
-	sh autogen.sh
+	cd "$srcdir/$pkgname-$pkgver"
 	./configure \
 		--build=$CBUILD \
 		--host=$CHOST \
@@ -28,6 +27,6 @@ build() {
 }
 
 package() {
-	cd "$srcdir/$pkgname-$pkgname-$pkgver"
+	cd "$srcdir/$pkgname-$pkgver"
 	make DESTDIR="$pkgdir" install
 }
