@@ -155,6 +155,10 @@ ubuntu18:
     VERSION: 2.1.8-stable
   <<: *debian9common
 
+ubuntu20:
+  image: $DOCKER_REGISTRY_URL/ubuntu20:latest
+  <<: *debiancommon
+
 alpine38:
   image: $DOCKER_REGISTRY_URL/alpine38:latest
   variables:
