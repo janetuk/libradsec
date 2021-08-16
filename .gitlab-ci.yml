@@ -113,6 +113,8 @@ raspbian9:
     SRC_REPO: http://archive.raspbian.org/raspbian/ stretch main
     VERSION: 2.0.21-stable
   <<: *debian9common
+  tags:
+    - arm
 
 debian10:
   image: $DOCKER_REGISTRY_URL/debian10:latest
@@ -122,10 +124,19 @@ raspbian10:
   image: $DOCKER_REGISTRY_URL/raspbian10:latest
   when: manual
   <<: *debiancommon
+  tags:
+    - arm
 
-ubuntu16:
-  image: $DOCKER_REGISTRY_URL/ubuntu16:latest
+debian11:
+  image: $DOCKER_REGISTRY_URL/debian11:latest
   <<: *debiancommon
+
+raspbian11:
+  image: $DOCKER_REGISTRY_URL/raspbian11:latest
+  when: manual
+  <<: *debiancommon
+  tags:
+    - arm
 
 ubuntu18:
   image: $DOCKER_REGISTRY_URL/ubuntu18:latest
@@ -146,6 +157,8 @@ alpine311_armhf:
   image: $DOCKER_REGISTRY_URL/alpine311_arm:latest
   when: manual
   <<: *alpinecommon
+  tags:
+    - arm
 
 alpine313:
   image: $DOCKER_REGISTRY_URL/alpine313:latest
@@ -155,3 +168,5 @@ alpine313_armhf:
   image: $DOCKER_REGISTRY_URL/alpine313_arm:latest
   when: manual
   <<: *alpinecommon
+  tags:
+    - arm
